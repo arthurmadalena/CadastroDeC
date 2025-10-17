@@ -1,4 +1,4 @@
-package dev.JavaTeste.cadastroDe;
+package dev.JavaTeste.cadastroDe.Users;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

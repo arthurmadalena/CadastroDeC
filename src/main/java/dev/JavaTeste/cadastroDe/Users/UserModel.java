@@ -1,6 +1,9 @@
-package dev.JavaTeste.cadastroDe;
+package dev.JavaTeste.cadastroDe.Users;
 
+import dev.JavaTeste.cadastroDe.Assignments.AssignmentsModel;
 import jakarta.persistence.*;
+
+
 
 
 //Entity transforma uma classe comum em uma entidade do DB.
@@ -13,11 +16,20 @@ public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String userName;
-    String userEmail;
-    String userCity;
-    int userAge;
+    private Long id;
+
+    private String userName;
+
+    private String userEmail;
+
+    private String userCity;
+
+    private int userAge;
+
+    @ManyToOne
+    @JoinColumn(name = "assignments_id") // Foreign Key ou Chave Estrangeira
+    private AssignmentsModel userAssignment;
+
 
     public UserModel() {
 
