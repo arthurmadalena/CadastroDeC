@@ -72,4 +72,12 @@ public class UserModel {
     public void setUserAge(int userAge) {
         this.userAge = userAge;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
